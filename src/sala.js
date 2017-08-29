@@ -5,8 +5,7 @@ const reg = new RegExp(/Ext.data.PagingMemoryProxy\((\[\s*.*\s*\}\s*\]),\s*false
 module.exports = function () {
 	return new Promise((resolve, reject) => {
 		request.get('http://chaira.udla.edu.co/Reservas/Views/Public/Salas.aspx?tipo=Sistemas').then(html => {
-			var json_str = reg.exec(html)[1]
-			var json = JSON.parse(json_str)
+			var json = JSON.parse(reg.exec(html)[1])
 			return resolve(json)
 		}).catch(reject)
 	})

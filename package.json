@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/juliandavidmr/ParserChaira#readme",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.2",
+    "json5": "^0.5.1",
     "request": "^2.81.0"
   }
 }
